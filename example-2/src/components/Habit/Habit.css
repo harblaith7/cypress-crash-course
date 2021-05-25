@@ -1,0 +1,24 @@
+.Habit {
+    width: 75%;
+    padding: 5rem 2.5rem;
+}
+
+.Habit-header {
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.Habit__heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Habit__heading-container button {
+    padding: 0.25rem 2rem;
+    border: none;
+    background-color: rgba(70, 178, 240, 0.157);
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
