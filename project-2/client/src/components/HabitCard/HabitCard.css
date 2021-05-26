@@ -1,0 +1,26 @@
+.HabitCard {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.071);
+    display: flex;
+    margin-bottom: 0.75rem;
+}
+
+.HabitCard__completion-container {
+    width: 15%;
+    border-right: 0.1rem solid rgba(0, 0, 0, 0.062);
+    padding: 1rem;
+    justify-content: center;
+    display: flex;
+}
+
+.HabitCard__habit-container {
+    display: flex;
+    align-items: center;
+    padding: 1rem
+}
+
+.HabitCard__completion-icon {
+    width: 1rem;
+    opacity: 0.5;
+}
