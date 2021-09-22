@@ -14,7 +14,7 @@ describe("Locators", () => {
         // Get all elements by className
         cy.get(".btn-with-class")
 
-        // Get all elements by className
+        // Get all elements by id
         cy.get("#btn-with-id")
 
         // Get all elements with specific classes
