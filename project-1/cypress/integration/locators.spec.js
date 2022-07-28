@@ -29,4 +29,12 @@ describe('Locators', () => {
 
     cy.getByTestId('btn-id-1')
   })
+
+  it('locating elements with contains', () => {
+    cy.contains('Unique Text')
+    cy.contains('Not Unique Text')
+    cy.contains("[type='submit']", 'Not Unique Text')
+    cy.contains('form', 'Not Unique Text')
+    cy.get("[type='submit']").contains('Not Unique Text')
+  })
 })
