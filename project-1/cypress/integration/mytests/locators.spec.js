@@ -43,7 +43,7 @@ describe('Locators', () => {
   /**
    * Contains method
    * 
-   * It selects a single element that matches the selector (optional) and contains the text.
+   * It selects a single element that matches the selector (optional) and contained text.
    */
   it('locating elements with contains', () => {
     // Get an element by text
