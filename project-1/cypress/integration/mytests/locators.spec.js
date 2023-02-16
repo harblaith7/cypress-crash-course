@@ -5,6 +5,11 @@ describe('Locators', () => {
     cy.visit('/elements')
   })
 
+  /**
+   * Get method
+   * 
+   * It selects all elements that match the selector.
+   */
   it('locating elements with get', () => {
     // Get all elements by tag name
     cy.get('button')
@@ -35,12 +40,18 @@ describe('Locators', () => {
     cy.getByTestId('btn-id-1')
   })
 
+  /**
+   * Contains method
+   * 
+   * It selects a single element that matches the selector (optional) and contains the text.
+   */
   it('locating elements with contains', () => {
     // Get an element by text
     cy.contains('Unique Text')
-
-    // Get an element by text (but not unique)
     cy.contains('Not Unique Text')
+
+    // Get an element by text (case insensitive)
+    cy.contains('unique text', { matchCase: false })
 
     // Use contains with a selector
     cy.contains('[type="submit"]', 'Not Unique Text')
@@ -48,5 +59,16 @@ describe('Locators', () => {
 
     // Combine contains with get
     cy.get('[type="submit"]').contains('Not Unique Text')
+  })
+
+  /**
+   * Find method
+   * 
+   * It selects all elements that match the selector and are descendants of the subject.
+   */
+  it('locating elements with find', () => {
+    // From the selected element(s), find all elements with the specified selector
+    cy.get('form').find('.btn-1')
+    cy.get('#form-1').find('.btn-2')
   })
 })
