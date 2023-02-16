@@ -34,4 +34,19 @@ describe('Locators', () => {
     // Get all elements with specfic data attribute using custom command defined in cypress/support/commands.js
     cy.getByTestId('btn-id-1')
   })
+
+  it('locating elements with contains', () => {
+    // Get an element by text
+    cy.contains('Unique Text')
+
+    // Get an element by text (but not unique)
+    cy.contains('Not Unique Text')
+
+    // Use contains with a selector
+    cy.contains('[type="submit"]', 'Not Unique Text')
+    cy.contains('form', 'Not Unique Text')
+
+    // Combine contains with get
+    cy.get('[type="submit"]').contains('Not Unique Text')
+  })
 })
