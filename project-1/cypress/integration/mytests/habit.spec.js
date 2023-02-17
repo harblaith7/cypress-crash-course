@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('habits dashboard', () => {
+describe('habit dashboard', () => {
   beforeEach(() => {
     cy.visit('/habits')
   })
